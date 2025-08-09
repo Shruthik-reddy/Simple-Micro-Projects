@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fun with API - Axios</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #333;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(74,144,226,0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+  }
+  button:active {
+    transform: translateY(0);
+  }
+  #result {
+    max-width: 600px;
+    background: rgba(255 255 255 / 0.85);
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    user-select: text;
+  }
+  #dogDiv {
+    margin-top: 20px;
+  }
+  #dogimg {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: block;
+    margin-top: 10px;
+  }
+  @media (max-width: 480px) {
+    button {
+      width: 100%;
+      max-width: 280px;
+      margin: 0.5rem 0;
+    }
+    #result {
+      font-size: 1.1rem;
+      padding: 15px 20px;
+      max-width: 90vw;
+    }
+    #dogimg {
+      max-width: 90vw;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Fun with APIs</h1>
+  <button id="fact">Show new fact</button>
+  <p id="result">Click the button to see a cat fact!</p>
+  <button id="dog">Generate dog image</button>
+  <div id="dogDiv">
+    <img id="dogimg" alt="Random Dog" />
+  </div>
+
+<script>
+    let catbtn = document.querySelector("#fact");
+    let dogbtn = document.querySelector("#dog");
+
+    catbtn.addEventListener("click", async () => {
+        let fact = await getFacts();
+        let p = document.querySelector("#result");
+        p.innerText = fact;
+    });
+
+    dogbtn.addEventListener("click", async () => {
+        let link = await getImg();
+        let img = document.querySelector("#dogimg");
+        img.setAttribute("src", link);
+    });
+    
+    let url = "https://catfact.ninja/fact";
+    async function getFacts() {
+        try {
+            let res = await axios.get(url);
+            return res.data.fact;
+        } catch {
+            return "No fact found";
+        }
+    }
+
+    let url2 = "https://dog.ceo/api/breeds/image/random";
+    async function getImg() {
+        try {
+            let res = await axios.get(url2);
+            return res.data.message;
+        } catch {
+            return "/";
+        }
+    }
+</script>
+</body>
+</html>
