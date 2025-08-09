@@ -10,26 +10,26 @@ These projects are great for learning UI design, interactivity, and basic API in
 ### 1️⃣ Simple Chat Module 💬
 A basic chat interface where users can type and send messages.
 - **Focus:** Message display layout, scrollable chat window, and input handling.
-- **Tech:** HTML, CSS, JavaScript
-  ![Chat Demo](Simple Chat module (FrontEnd)/images/Output.gif)
+- **Tech:** HTML, CSS, JavaScript  
+  ![Chat Demo](Simple%20Chat%20module%20(FrontEnd)/images/Output.gif)
 
 ### 2️⃣ Spotify Clone 🎵
 A front-end clone of Spotify's interface.
 - **Focus:** Music player UI design, playlist styling, and layout structure.
-- **Tech:** HTML, CSS, JavaScript
-  ![Spotify Demo](Spotify clone/public/images/Output.gif)
+- **Tech:** HTML, CSS, JavaScript  
+  ![Spotify Demo](Spotify%20clone/public/images/Output.gif)
 
 ### 3️⃣ Simple Photography Application 📷
 A responsive photo gallery web app to showcase images in a clean layout.
 - **Focus:** Grid-based design, hover effects, and image presentation.
-- **Tech:** HTML, CSS, JavaScript
-  ![Photography Demo](Simple photography - HTML CSS page/public/images/Output.gif)
+- **Tech:** HTML, CSS, JavaScript  
+  ![Photography Demo](Simple%20photography%20-%20HTML%20CSS%20page/public/images/Output.gif)
 
 ### 4️⃣ Simon Game 🎮
 A browser-based version of the classic Simon memory game.
 - **Focus:** Game logic, sound effects, and event handling in JavaScript.
-- **Tech:** HTML, CSS, JavaScript
-![Simon Game Demo](Simon Game/images/Output.gif)
+- **Tech:** HTML, CSS, JavaScript  
+  ![Simon Game Demo](Simon%20Game/images/Output.gif)
 
 ### 5️⃣ Fun with APIs 🐶🐱
 A project demonstrating API usage with JavaScript `fetch()`.
@@ -37,8 +37,8 @@ A project demonstrating API usage with JavaScript `fetch()`.
   - Random Dog Image API → Displays a random dog image.
   - Cat Fact API → Shows a random cat fact.
 - **Extra:** Includes a free APIs list for anyone who wants to create their own fun projects.
-- **Tech:** HTML, CSS, JavaScript
-![Fun with APIs Demo](Fun with APIs/images/Output.gif)
+- **Tech:** HTML, CSS, JavaScript  
+  ![Fun with APIs Demo](Fun%20with%20APIs/images/Output.gif)
 
 ---
 
@@ -54,6 +54,7 @@ Here are some free APIs included in **Fun with APIs**:
 
 ## 📂 Repository Structure
 The repository is organized as follows:
+
 ```Simple-Micro-Projects/
 │── Simple Chat Module (FrontEnd)/ # Simple chat interface
 │── Spotify Clone/ # Front-end Spotify UI
